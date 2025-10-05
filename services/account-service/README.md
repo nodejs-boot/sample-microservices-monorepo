@@ -224,6 +224,14 @@ When the service is running, you can access the interactive API documentation at
 - **Swagger UI**: `http://localhost:40000/api-docs/`
 - **OpenAPI Spec**: `http://localhost:40000/api-docs/swagger.json`
 
+## Actuator Endpoints
+The service includes actuator endpoints for health checks and metrics, including a Prometheus metrics endpoint.
+- **Health Check**: `http://localhost:40000/actuator/health`
+- **Metrics**: `http://localhost:40000/actuator/metrics`
+- **Prometheus Metrics**: `http://localhost:40000/actuator/prometheus`
+- **Info**: `http://localhost:40000/actuator/info`
+- **Env**: `http://localhost:40000/actuator/git`
+
 ## Architecture
 
 The Account Service follows NodeBoot's layered architecture:

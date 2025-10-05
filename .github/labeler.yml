@@ -1,0 +1,20 @@
+backend:
+  - services/**/*
+shared:
+  - shared/**/*
+cicd:
+  - .github/workflows/**/*
+contracts:
+  - services/contracts-service/**/*
+facts-lake:
+  - services/facts-lake-service/**/*
+providers-runner:
+  - services/providers-runner-service/**/*
+tech-stack:
+  - services/tech-stack-service/**/*
+docs:
+  - docs/**/*
+  - mkdocks.yaml
+  - techdocs-requirements.txt
+backstage-catalog:
+  - catalog-*.yaml

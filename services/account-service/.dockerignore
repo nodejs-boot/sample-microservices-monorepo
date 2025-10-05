@@ -1,0 +1,12 @@
+.git
+.gitignore
+.DS_Store
+README.md
+LICENSE.md
+*.md
+prod-out/*
+!prod-out/dist
+!prod-out/node_modules
+prod/*
+http/*
+.turbo

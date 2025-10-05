@@ -1,0 +1,16 @@
+packages:
+  - services/*
+  - shared/*
+
+ignoredBuiltDependencies:
+  - protobufjs
+
+onlyBuiltDependencies:
+  - '@datadog/native-appsec'
+  - '@datadog/native-iast-taint-tracking'
+  - '@datadog/native-metrics'
+  - '@datadog/pprof'
+  - '@scarf/scarf'
+  - '@swc/core'
+  - dd-trace
+  - unrs-resolver

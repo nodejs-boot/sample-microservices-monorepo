@@ -1,0 +1,14 @@
+blackduck:
+  project:
+    name: dh-io-backstage/tech-insights
+    tenant: backstage
+    layer: back
+    phase: In Development
+    distribution: INTERNAL
+    platform: entit
+    developed: int
+    users: leint
+    tags:
+      - tech_insights
+      - facts
+      - rules

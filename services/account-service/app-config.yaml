@@ -1,0 +1,63 @@
+# App configurations
+app:
+    name: "account-service"
+    platform: "demo-project"
+    environment: "development"
+    defaultErrorHandler: false
+    port: 40000
+
+api:
+    routePrefix: "/v1"
+    nullResultCode: 200
+    undefinedResultCode: 200
+    paramOptions:
+        required: false
+    validations:
+        enable: true
+        enableDebugMessages: false
+        skipUndefinedProperties: false
+        skipNullProperties: false
+        skipMissingProperties: false
+        whitelist: false
+        forbidNonWhitelisted: false
+        forbidUnknownValues: false
+        stopAtFirstError: false
+
+# Server configurations
+server:
+    cors:
+        origin: "*"
+        methods:
+            - GET
+            - POST
+            - DELETE
+            - PUT
+        credentials: true
+        maxAge: 55000
+        cacheControl: 4096
+        preflightContinue: true
+        optionsSuccessStatus: 204
+        preflight: true
+        strictPreflight: false
+        exposedHeaders: []
+        allowedHeaders: []
+
+# Storage configurations
+persistence:
+    type: "mongodb"
+    cache: false
+    mongodb:
+        database: "accounts"
+        #url: mongodb+srv://${DATABASE_CREDENTIALS_TOKEN}@db-name.mongodb.net/?retryWrites=true&w=majority&appName=demo-project
+        url: mongodb://localhost:27017/?directConnection=true
+
+integrations:
+    http:
+        user-service:
+            baseURL: "http://localhost:30000/v1"
+            timeout: 10000
+            httpLogging: true
+        statistics-service:
+            baseURL: "http://localhost:32000/v1"
+            timeout: 10000
+            httpLogging: true

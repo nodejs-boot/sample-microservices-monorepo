@@ -1,0 +1,55 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    ".eslintrc.js",
+    ".eslintignore",
+    ".lintstagedrc.js",
+    ".prettierrc.yaml",
+    "tsconfig.base.json",
+    "tsconfig.build.json",
+    "tsconfig.json"
+  ],
+  "tasks": {
+    "//#lint": {
+      "inputs": ["!.git/**", "!node_modules/**", "!packages/**"]
+    },
+    "//#lint:fix": {
+      "inputs": ["!.git/**", "!node_modules/**", "!packages/**"]
+    },
+    "//#format": {
+      "inputs": ["!.git/**", "!node_modules/**", "!packages/**"]
+    },
+    "//#format:fix": {
+      "inputs": ["!.git/**", "!node_modules/**", "!packages/**"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        "tsconfig.json",
+        "tsconfig.*.json",
+        "tsconfig.tsbuildinfo"
+      ]
+    },
+    "clean:build": {
+      "dependsOn": ["build"]
+    },
+    "dev": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "lint:fix": {},
+    "format": {},
+    "format:fix": {},
+    "release": {},
+    "nodeboot:update": {},
+    "test": {
+      "dependsOn": ["build"]
+    },
+    "tsc": {
+      "outputs": ["tsconfig.tsbuildinfo"]
+    }
+  }
+}

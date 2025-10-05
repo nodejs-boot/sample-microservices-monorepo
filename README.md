@@ -69,7 +69,6 @@ This project showcases a microservices architecture with three interconnected se
 ### Database & Persistence
 - **MongoDB**: Document database with cloud Atlas integration
 - **TypeORM**: Object-relational mapping with MongoDB support
-- **In-memory MongoDB**: Development and testing environment
 
 ### Development & Quality
 - **Jest**: Testing framework with SWC transpilation
@@ -85,6 +84,7 @@ This project showcases a microservices architecture with three interconnected se
 
 ### DevOps & Tooling
 - **Docker**: Containerization support for each service
+- **GitHub Actions**: CI-CD
 - **Nodemon**: Development server with hot reloading
 - **Winston**: Structured logging
 - **Changesets**: Version management and changelog generation
@@ -125,7 +125,7 @@ sample-microservices-monorepo/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/nodejs-boot/sample-microservices-monorepo.git
    cd sample-microservices-monorepo
    ```
 
